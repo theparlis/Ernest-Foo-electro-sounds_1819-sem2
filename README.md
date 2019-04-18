@@ -16,7 +16,7 @@ All code can be found within the Github Folders and are labelled accordingly to 
 
 Links for Final Project Submission Media:
 ---
-Final Frontier - 
+Final Frontier - https://theparlis.github.io/ernestfoo.github.io/
 
 Original Soundtrack - https://soundcloud.com/ernest-foo/vision
 

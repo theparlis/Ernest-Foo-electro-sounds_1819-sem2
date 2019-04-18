@@ -18,7 +18,7 @@ Links for Final Project Submission Media:
 ---
 Final Frontier - 
 
-Original Soundtrack - 
+Original Soundtrack - https://soundcloud.com/ernest-foo/vision
 
 Music video made using Final Frontier and the Original Soundtrack
 

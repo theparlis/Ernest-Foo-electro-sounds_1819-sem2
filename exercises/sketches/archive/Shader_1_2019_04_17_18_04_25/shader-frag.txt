@@ -1,0 +1,21 @@
+#ifdef GL_ES
+precision mediump float;
+#endif
+
+uniform float value;
+varying vec2 fragCoord;
+
+float rand(vec2 co){
+    return fract(sin(dot(co.xy ,vec2(12.9898,78.233))) * 43758.5453);
+}
+
+void main(){
+  // get the coordinates (uv, between 0 and 1) of a fragment (pixel)
+	vec2 uv = fragCoord;
+  
+  // calculate a pseudo-random number
+  float rnd = rand(uv*value);
+  
+  // apply random number to fragment color.
+  gl_FragColor = vec4(rnd, 0.2, 0.4, 1.0);
+}

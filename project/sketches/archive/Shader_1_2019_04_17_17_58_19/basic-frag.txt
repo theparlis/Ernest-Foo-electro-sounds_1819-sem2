@@ -1,0 +1,24 @@
+
+#ifdef GL_ES
+precision mediump float;
+#endif
+
+varying vec2 fragCoord;
+
+uniform sampler2D tex0;
+uniform vec2 offset;
+uniform float time;
+
+void main() {
+  vec2 uv = fragCoord;
+  uv.y = 1.0 - uv.y;
+  vec2 distortion = vec2 (tan(uv.y * offset.x + time * 0.001) *offset.y, sin(uv.x  * uv.y * offset.x + time) * offset.y);
+  //vec2 distortion = vec2 (cos(uv.y * offset.y + time * 0.0001) *offset.y, cos(uv.y * offset.x + time) * offset.y);
+  float slides = uv.y * offset.x + time * 0.9;
+  slides = fract(slides);
+  
+  vec4 col = texture2D(tex0, uv + distortion * slides * 1.0);
+
+
+  gl_FragColor = col;
+}
